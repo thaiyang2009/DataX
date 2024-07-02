@@ -1,0 +1,14 @@
+{
+  "name": "pulsarwriter",
+  "parameter": {
+    "bootstrapServers": "this is bootstrapServers",
+    "topic": "this is send topic",
+    "column": [
+      "id",
+      "name"
+    ],
+    "props": {
+      "acks": "all"
+    }
+  }
+}

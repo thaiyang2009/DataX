@@ -1,0 +1,48 @@
+{
+  "job": {
+    "content": [
+      {
+        "reader": {
+          "name": "streamreader",
+          "parameter": {
+            "sliceRecordCount": 10,
+            "column": [
+              {
+                "type": "long",
+                "value": "10"
+              },
+              {
+                "type": "string",
+                "value": "hello，你好，世界-DataX"
+              },
+              {
+                "type": "date",
+                "value": "2014-07-07 00:00:00"
+              }
+            ]
+          }
+        },
+        "writer": {
+          "name": "pulsarwriter",
+          "parameter": {
+            "serviceUrl": "pulsar://localhost:6650",
+            "topic": "ods_stream_test",
+            "keyIndex": -1,
+            "column": [
+              "id",
+              "content",
+              "date"
+            ],
+            "props": {
+            }
+          }
+        }
+      }
+    ],
+    "setting": {
+      "speed": {
+        "channel": 2
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "pulsarwriter",
+  "class": "com.alibaba.datax.plugin.writer.pulsarwriter.PulsarWriter",
+  "description": "将数据通过Pulsar生产者写入指定topic",
+  "developer": "hy"
+}
